@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+      <div class="container">
+         <nav>
+            <a href="index.html" class="logo">Mushtaq Hussain</a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">My Services</a>
+                <a href="index.html#about">About</a>
+                <a href="project.html" class="active">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <nav class="hamburger-nav">
+                    <p class="section-title">About me</p>
+                    <button class="close-btn" id="closeHamburger">×</button>
+                </nav>
+                <div class="hamburger-about">
+                    <div class="about-grid">
+                        <div class="card">
+                            <h3>Hi, I’m a web developer.</h3>
+                            <p>I build responsive websites using HTML, CSS, and JavaScript. My goal is to create thoughtful user experiences with clean, modern interfaces and intuitive interactions.</p>
+                            <div class="features">
+                                <div class="feature">
+                                    <strong>Responsive design</strong>
+                                    <span>Fast layouts that adapt to mobile, tablet, and desktop.</span>
+                                </div>
+                                <div class="feature">
+                                    <strong>Interactive UI</strong>
+                                    <span>Smooth animations and clear navigation for every visitor.</span>
+                                </div>
+                                <div class="feature">
+                                    <strong>Simple custom code</strong>
+                                    <span>Easy-to-edit structure so you can update content quickly.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>What I enjoy working on</h3>
+                            <p>Projects that combine strong visual design with reliable performance. I enjoy creating landing pages, portfolios, and small apps that feel polished and easy to use.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger-contact">
+                    <p class="section-title">Get in touch</p>
+                    <div class="contact-card card">
+                        <h3>Let's build something together.</h3>
+                        <p>Fill in your contact details or copy the email below to start a conversation.</p>
+                        <div class="contact-actions">
+                            <a href="mailto:mushtaq93808@gmail.com" class="btn">Email me</a>
+                            <button id="hamburgerCopyEmailBtn" class="btn-outline" type="button">Copy email</button>
+                        </div>
+                        <p class="contact-info">Or change this email to your own address and share it with clients.</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-hero-content">
+          <div class="hero-header-wrapper">
+            <nav class="breadcrumb">
+              <a href="index.html" class="btn-outline">← Home</a>
+              <a href="project.html" class="btn-outline">Projects</a>
+            </nav>
+            <div>
+              <h1>Get in Touch</h1>
+              <p>Have a project in mind? Let's discuss how I can help bring your vision to life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="contact">
+          <div class="container">
+            
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2>My Location</h2>
+                <p>Find me in Nagaral, Gilgit, Pakistan</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Nagaral+Gilgit+Pakistan&output=embed" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Left Side - Creative/Funny Content -->
+                <div class="contact-creative">
+                    <div class="creative-content">
+                        <div class="coffee-animation">
+                            <div class="coffee-cup">
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                                <div class="steam"></div>
+                            </div>
+                        </div>
+                        <h3>Let's Grab a Virtual Coffee ☕</h3>
+                        <p class="creative-text">
+                            "I turn caffeine into code and dreams into websites. 
+                            Got a project? Let's chat over pixels and possibilities!"
+                        </p>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <span class="emoji">⚡</span>
+                                <span>Fast turnaround</span>
+                            </div>
+                            <div class="fun-fact">
+                                <span class="emoji">🎯</span>
+                                <span>Pixel perfect</span>
+                            </div>
+                            <div class="fun-fact">
+                                <span class="emoji">🚀</span>
+                                <span>Always learning</span>
+                            </div>
+                        </div>
+                        <div class="response-time">
+                            <p>💬 Usually responds within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-form-card card">
+                        <h3>Send me a message</h3>
+                        <p>Fill out the form below and I'll get back to you soon!</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Tell me about your project..." rows="5"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon">📤</span>
+                            </button>
+                        </form>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+      
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">Mushtaq Hussain</a>
+                <p>Building polished websites with a modern touch — clean code, strong visuals, and thoughtful user experience.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-links">
+                    <a href="https://github.com/mushtaq93808-png" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mushtaq-hussain-2829ab2a3/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="#" target="_blank" rel="noreferrer">Twitter</a>
+                </div>
+                <p class="footer-note">Ready to launch your next project? <a href="#contact">Let’s connect.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
