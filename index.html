@@ -1,12 +1,27 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>My Portfolio - Mushtaq Hussain</title>
-                    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Mushtaq Hussain</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/android-chrome-192x192.png">
 </head>
 <body>
+    <!-- Professional Splash Screen -->
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-content"> 
+            <div class="splash-logo">MH</div>
+            <h1 class="splash-title">Mushtaq Hussain</h1>
+            <p class="splash-subtitle">Web Developer • Designer • Freelancer</p>
+            <div class="splash-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-percent">0%</span>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="container">
             <nav>
@@ -26,7 +41,7 @@
                         <button class="close-btn" id="closeHamburger">×</button>
                     </nav>
                     <div class="hamburger-about">
-                        <div class="about-grid">
+                        <div class="">
                             <div class="card">
                                 <h3>Hi, I’m a web developer.</h3>
                                 <p>I build responsive websites using HTML, CSS, and JavaScript. My goal is to create thoughtful user experiences with clean, modern interfaces and intuitive interactions.</p>
@@ -60,7 +75,7 @@
                                 <a href="mailto:mushtaq93808@gmail.com" class="btn">Email me</a>
                                 <button id="hamburgerCopyEmailBtn" class="btn-outline" type="button">Copy email</button>
                             </div>
-                            <p class="contact-info">Or change this email to your own address and share it with clients.</p>
+                         
                         </div>
                     </div>
                 </div>
@@ -84,7 +99,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="profile.png" alt="Portfolio placeholder image">
+                <img src="assets/profile.png" alt="Portfolio placeholder image">
             </div>
         </section>
      </div>
@@ -157,7 +172,7 @@
                 <div class="card">
                     
                     <div class="activity-gallery">
-                        <img class="card-img" src="profile.png" alt="Activity image">
+                        <img class="card-img" src="assets/profile.png" alt="Activity image">
                     </div>
                 </div>
             </div>
@@ -182,6 +197,7 @@
        
 
         <section id="skills">
+            
             <p class="section-title">My Skills</p>
             <h2 class="section-subtitle">Crafting Stories through Design and Imagination</h2>
             
@@ -377,3 +393,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
