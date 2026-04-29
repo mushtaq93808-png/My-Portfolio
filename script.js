@@ -51,6 +51,13 @@ if (closeHamburger) {
   });
 }
 
+// Close mobile hamburger menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 640 && navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== hamburger) {
+    navLinks.classList.remove('active');
+  }
+});
+
 // Active nav link on scroll
 function setActiveNavLink() {
   const sections = document.querySelectorAll('section[id]');
