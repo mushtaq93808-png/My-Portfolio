@@ -1,3 +1,4 @@
+
 const yearEl = document.querySelector("#currentYear");
 const emailBtn = document.querySelector("#copyEmailBtn");
 const hamburgerCopyBtn = document.querySelector("#hamburgerCopyEmailBtn");
@@ -203,24 +204,21 @@ function initContactForm() {
       showFormMessage('Please enter a valid email address.', 'error');
       return;
     }
-    
-    // Simulate form submission (replace with actual API call)
-    showFormMessage('Sending message...', '');
-    
-    // Simulate API delay
+
+    const recipient = 'mushtaq93808@gmail.com';
+    const subject = encodeURIComponent(`Contact from ${data.fullName}`);
+    const body = encodeURIComponent(`Name: ${data.fullName}\nEmail: ${data.email}\n\n${data.message}`);
+    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+    showFormMessage('Opening email client to send your message...', 'success');
+    window.location.href = mailtoLink;
+
     setTimeout(() => {
-      // For demo purposes, always show success
-      // In real implementation, handle actual form submission
-      showFormMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon! 🎉', 'success');
-      
-      // Reset form
       contactForm.reset();
-      
-      // Hide message after 5 seconds
       setTimeout(() => {
         formMessage.style.display = 'none';
       }, 5000);
-    }, 2000);
+    }, 500);
   });
   
   function showFormMessage(message, type) {
@@ -276,3 +274,48 @@ document.addEventListener('DOMContentLoaded', function() {
   initContactForm();
   initSectionAnimations();
 });
+
+window.addEventListener('load', function() {
+  const splashScreen = document.getElementById('splash-screen');
+  const progressPercent = document.getElementById('progress-percent');
+  
+  if (!splashScreen) return;
+
+  // Animate progress percentage
+  let currentPercent = 0;
+  const progressInterval = setInterval(function() {
+    currentPercent = Math.min(currentPercent + Math.random() * 25 + 10, 99);
+    if (progressPercent) {
+      progressPercent.textContent = Math.floor(currentPercent) + '%';
+    }
+  }, 200);
+
+  // Auto-dismiss splash screen after 2.5 seconds
+  setTimeout(function() {
+    clearInterval(progressInterval);
+    if (progressPercent) {
+      progressPercent.textContent = '100%';
+    }
+    
+    setTimeout(function() {
+      splashScreen.classList.add('fade-out');
+      setTimeout(function() {
+        if (splashScreen.parentNode) {
+          splashScreen.parentNode.removeChild(splashScreen);
+        }
+      }, 800);
+    }, 200);
+  }, 2500);
+
+  // Click anywhere to skip
+  splashScreen.addEventListener('click', function() {
+    clearInterval(progressInterval);
+    splashScreen.classList.add('fade-out');
+    setTimeout(function() {
+      if (splashScreen.parentNode) {
+        splashScreen.parentNode.removeChild(splashScreen);
+      }
+    }, 800);
+  });
+});
+
